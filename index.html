@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Contatos</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="./Imagens/notebook.svg" alt="agenda de contatos">
+            <h1>Agenda de Contatos</h1>
+        </header>
+        <form id="form-contato">
+            <input type="text" required placeholder="Nome do contato" id="nome-contato" pattern="^[a-zA-Z]+(\s[a-zA-Z]+)+$" title="O nome deve conter pelo menos um sobrenome.">
+            <input type="tel" required placeholder="Número do contato" id="telefone-contato" pattern="\(\d{2}\) \d{4,5}-\d{4}" title="O número deve seguir o formato (XX) XXXXX-XXXX">
+
+            <button type="submit">Adicionar +</button>
+        </form>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome Completo</th>
+                    <th>Número para Contato</th>
+                </tr>
+            </thead>
+            <tbody id="contatos-body">
+                
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Total de Contatos</td>
+                    <td id="total-contatos">0</td> 
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    
+    <footer class="rodape">
+        <p>© Agenda de Contatos da Rodrigo - Todos os direitos reservados - 2024</p>
+    </footer>
+<script src="./main.js"></script>
+</body>
+
+</html>
